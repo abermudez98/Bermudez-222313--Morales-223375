@@ -6,6 +6,7 @@ public class CalendarioInterfaz extends javax.swing.JFrame {
 
     public CalendarioInterfaz() {
         initComponents();
+        
     }
 
     /**
@@ -17,6 +18,7 @@ public class CalendarioInterfaz extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jCalendar1 = new com.toedter.calendar.JCalendar();
         PanelFondo = new javax.swing.JPanel();
         calendario = new com.toedter.calendar.JCalendar();
         añadirEvento = new javax.swing.JButton();
@@ -125,6 +127,7 @@ public class CalendarioInterfaz extends javax.swing.JFrame {
     private javax.swing.JPanel PanelFondo;
     private javax.swing.JButton añadirEvento;
     private com.toedter.calendar.JCalendar calendario;
+    private com.toedter.calendar.JCalendar jCalendar1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
