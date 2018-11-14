@@ -1,8 +1,11 @@
 package Interfaz;
 
 import java.util.*;
+import Dominio.*;
 
-public class CalendarioInterfaz extends javax.swing.JFrame {
+public class CalendarioInterfaz extends javax.swing.JFrame implements Observer {
+    
+    private Sistema modelo;
 
     public CalendarioInterfaz() {
         initComponents();
