@@ -5,8 +5,7 @@ import java.util.*;
 public class CalendarioInterfaz extends javax.swing.JFrame {
 
     public CalendarioInterfaz() {
-        initComponents();
-        
+        initComponents();       
     }
 
     /**
@@ -49,7 +48,7 @@ public class CalendarioInterfaz extends javax.swing.JFrame {
                     .addGroup(PanelFondoLayout.createSequentialGroup()
                         .addGap(28, 28, 28)
                         .addComponent(añadirEvento)
-                        .addContainerGap(58, Short.MAX_VALUE))
+                        .addContainerGap(66, Short.MAX_VALUE))
                     .addGroup(PanelFondoLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane1)
@@ -62,7 +61,7 @@ public class CalendarioInterfaz extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38)
                 .addComponent(añadirEvento)
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addContainerGap(57, Short.MAX_VALUE))
             .addComponent(calendario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
