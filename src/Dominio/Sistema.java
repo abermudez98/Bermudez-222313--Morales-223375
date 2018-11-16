@@ -9,7 +9,7 @@ package Dominio;
  *
  * @author Alejandro
  */
-public class Main {
+public class Sistema {
 
     /**
      * @param args the command line arguments
