@@ -1,11 +1,31 @@
 package Interfaz;
 
 import java.util.*;
+import Dominio.*;
+import javax.swing.JOptionPane;
 
-public class CalendarioInterfaz extends javax.swing.JFrame {
-
+public class CalendarioInterfaz extends javax.swing.JFrame implements Observer {
+    
+    private Sistema modelo;
+  
     public CalendarioInterfaz() {
         initComponents();       
+  
+    public Sistema getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(Sistema modelo) {
+        this.modelo = modelo;
+    }
+
+    public CalendarioInterfaz(Sistema unModelo) {
+        this.setModelo(unModelo);
+        initComponents();
+        this.getModelo().addObserver(this);
+        Date fecha = calendario.getDate();
+        String[] lstEventos = this.listaAArray();
+        lstEventosDelDia.setListData(lstEventos);
     }
 
     /**
@@ -133,4 +153,22 @@ public class CalendarioInterfaz extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JList<String> lstEventosDelDia;
     // End of variables declaration//GEN-END:variables
+
+public String[] listaAArray() {
+        ArrayList<Jugador> listaEventos = this.getModelo().getListaEventos();
+        String[] lista = new String[listaEventos.size()];
+        for (int i = 0; i < listaEventos.size(); i++) {
+            Evento e = e.get(i);
+            lista[i] = e.toString();
+        }
+        return lista;
+    }
+
+    @Override
+    public void update(Observable o, Object o1) {
+        String[] listaEventos = this.listaAArray();
+        lstEventosDelDia.setListData(listaEventos);
+    }
+
+
 }
